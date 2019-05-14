@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: sample-deployment
+  namespace: development
+  labels:
+    app: basic-nodejs
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        apps: basic-nodejs
+    spec:
+      containers:
+      - name: test-service
+        image: esyed/Assessment/basic-nodejs:test
+        ports:
+        - containerPort: 8081

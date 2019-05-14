@@ -1,0 +1,23 @@
+{
+    "taskDefinition": {
+        "volumes": [],
+        "taskDefinitionArn": "arn:aws:ecs:us-east-1:12345:task-definition/assessment:1",
+        "containerDefinitions": [
+            {
+                "name": "assessment-test",
+                "image": "esyed/basic-nodejs:test",
+                "cpu": 10,
+                "portMappings": [
+                    {
+                        "containerPort": 5000,
+                        "hostPort": 8081
+                    }
+                ],
+                "memory": 256,
+                "essential": true
+            }
+        ],
+        "family": "test-service",
+        "revision": 1
+    }
+    }
